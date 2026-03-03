@@ -108,7 +108,3 @@ http://localhost:8501
 * 🤖 Machine Learning & Generative AI
 * 🧠 Agentic AI Systems
 * 💻 Software Engineering & DSA
-
-## 📄 License
-
-MIT License.
