@@ -32,6 +32,18 @@
         </div>
 
         <div class="mb-4">
+          <label for="maxTokens" class="form-label fw-semibold d-flex justify-content-between">
+            <span>⚡ Max Tokens</span>
+            <span class="token-badge" id="maxTokensLabel">2000</span>
+          </label>
+          <input id="maxTokens" type="range" class="form-range slider-enhanced" min="500" max="4000" step="100" value="2000" />
+          <div class="d-flex justify-content-between small text-secondary mt-2">
+            <span>Concise</span>
+            <span>Detailed</span>
+          </div>
+        </div>
+
+        <div class="mb-4">
           <label class="form-label fw-semibold">Select Models</label>
           <div class="models-selection">
             {% for model in available_models %}

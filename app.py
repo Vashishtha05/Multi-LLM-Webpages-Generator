@@ -51,7 +51,7 @@ Return ONLY the complete HTML code, nothing else."""
 
 
 def generate_landing_page(
-    client: OpenAI, product_description: str, model: str
+    client: OpenAI, product_description: str, model: str, max_tokens: int = 2000
 ) -> Generator[str, None, None]:
     """Generate a landing page using the specified LLM model."""
     start_time = time.time()
@@ -64,7 +64,7 @@ def generate_landing_page(
                 {"role": "user", "content": product_description},
             ],
             temperature=0.7,
-            max_tokens=2000,
+            max_tokens=max(500, min(max_tokens, 4000)),
             stream=True,
         )
 
@@ -107,6 +107,7 @@ def create_app() -> Flask:
         payload = request.get_json(silent=True) or {}
         description = (payload.get("description") or "").strip()
         selected_models = payload.get("models", [])
+        max_tokens = int(payload.get("max_tokens", 2000))
 
         if not description:
             return jsonify({"error": "Product description is required."}), 400
@@ -134,7 +135,7 @@ def create_app() -> Flask:
                     continue
 
                 html_content = ""
-                for chunk in generate_landing_page(clients[model], description, model):
+                for chunk in generate_landing_page(clients[model], description, model, max_tokens):
                     html_content += chunk
                     yield f'data: {{"model": "{model}", "chunk": {json.dumps(chunk)}}}\n\n'
 

@@ -1,5 +1,7 @@
 const form = document.getElementById("benchmarkForm");
 const descriptionInput = document.getElementById("description");
+const maxTokensInput = document.getElementById("maxTokens");
+const maxTokensLabel = document.getElementById("maxTokensLabel");
 const generateBtn = document.getElementById("generateBtn");
 const resultsTabs = document.getElementById("resultsTabs");
 const emptyState = document.getElementById("emptyState");
@@ -21,6 +23,15 @@ function getSelectedModels() {
   const checked = document.querySelectorAll(".model-select:checked");
   return Array.from(checked).map((el) => el.value);
 }
+
+// Update max tokens label on slider change
+maxTokensInput.addEventListener("input", () => {
+  maxTokensLabel.textContent = maxTokensInput.value;
+  maxTokensLabel.style.transform = "scale(1.1)";
+  setTimeout(() => {
+    maxTokensLabel.style.transform = "scale(1)";
+  }, 200);
+});
 
 function createTabButton(model) {
   const btn = document.createElement("button");
@@ -52,13 +63,14 @@ function createTabContent(model) {
   const frame = document.createElement("div");
   frame.className = "preview-frame";
 
-  const htmlContent = document.createElement("div");
-  htmlContent.id = `html_${model}`;
-  htmlContent.style.padding = "2rem";
-  htmlContent.style.overflow = "auto";
-  htmlContent.style.height = "600px";
+  const iframe = document.createElement("iframe");
+  iframe.id = `iframe_${model}`;
+  iframe.style.width = "100%";
+  iframe.style.height = "600px";
+  iframe.style.border = "none";
+  iframe.sandbox = "allow-same-origin allow-scripts";
 
-  frame.appendChild(htmlContent);
+  frame.appendChild(iframe);
   content.appendChild(indicator);
   content.appendChild(frame);
 
@@ -72,6 +84,7 @@ form.addEventListener("submit", async (event) => {
 
   const description = descriptionInput.value.trim();
   const models = getSelectedModels();
+  const maxTokens = Number(maxTokensInput.value);
 
   if (!description) {
     setStatus("Enter a description", "idle");
@@ -95,7 +108,7 @@ form.addEventListener("submit", async (event) => {
     const response = await fetch("/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ description, models }),
+      body: JSON.stringify({ description, models, max_tokens: maxTokens }),
     });
 
     if (!response.ok) {
@@ -144,8 +157,7 @@ form.addEventListener("submit", async (event) => {
             }
 
             if (event.status === "generating" && event.chunk) {
-              const htmlEl = document.getElementById(`html_${model}`);
-              htmlEl.innerHTML += event.chunk;
+              // Chunk received during generation
             } else if (event.status === "complete") {
               const elapsed = Date.now() - modelStartTime[model];
               modelTimings[model] = (elapsed / 1000).toFixed(2);
@@ -153,9 +165,9 @@ form.addEventListener("submit", async (event) => {
               const indicator = document.getElementById(`indicator_${model}`);
               indicator.innerHTML = `<span style="color: #10b981; font-weight: 600;">✓ Complete in ${modelTimings[model]}s</span>`;
 
-              const htmlEl = document.getElementById(`html_${model}`);
-              if (event.html) {
-                htmlEl.innerHTML = event.html;
+              const iframe = document.getElementById(`iframe_${model}`);
+              if (event.html && iframe) {
+                iframe.srcdoc = event.html;
               }
             } else if (event.error) {
               const indicator = document.getElementById(`indicator_${model}`);

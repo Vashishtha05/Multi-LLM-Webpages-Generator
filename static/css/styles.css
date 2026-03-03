@@ -149,6 +149,46 @@ body {
   font-size: 1.5rem;
 }
 
+.slider-enhanced {
+  height: 0.5rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #e5e7eb 0%, #d1d5db 100%);
+  cursor: pointer;
+}
+
+.slider-enhanced::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  border: 2px solid white;
+}
+
+.slider-enhanced::-moz-range-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  border: 2px solid white;
+}
+
+.token-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: var(--primary-gradient);
+  color: white;
+  font-weight: 600;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  min-width: 60px;
+  text-align: center;
+}
+
 .btn-elevated {
   background: var(--primary-gradient);
   border: none;
