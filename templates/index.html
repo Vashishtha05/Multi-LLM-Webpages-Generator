@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}LLM Benchmark - Landing Page Generator{% endblock %}
+
+{% block content %}
+<div class="page-header mb-5">
+  <div class="text-center">
+    <h1 class="display-5 fw-bold mb-2">⚡ LLM Benchmark Studio</h1>
+    <p class="lead text-secondary">Generate landing pages with multiple LLMs and compare results in real-time</p>
+  </div>
+</div>
+
+<div class="row g-4">
+  <!-- Input Panel -->
+  <div class="col-lg-4">
+    <div class="config-panel">
+      <div class="panel-header">
+        <h2 class="h5 mb-0">📋 Configuration</h2>
+      </div>
+
+      <form id="benchmarkForm" class="mt-4">
+        <div class="mb-4">
+          <label for="description" class="form-label fw-semibold">Product Description</label>
+          <textarea
+            id="description"
+            class="form-control form-input-enhanced"
+            rows="6"
+            placeholder="Describe your product or service. Example: A SaaS project management tool for remote teams..."
+            required
+          ></textarea>
+          <small class="text-secondary d-block mt-2">Be specific for better results. Include key features and target audience.</small>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label fw-semibold">Select Models</label>
+          <div class="models-selection">
+            {% for model in available_models %}
+            <div class="model-checkbox">
+              <input
+                type="checkbox"
+                class="form-check-input model-select"
+                id="model_{{ model }}"
+                name="models"
+                value="{{ model }}"
+                {% if loop.index <= 2 %}checked{% endif %}
+              />
+              <label for="model_{{ model }}" class="form-check-label">
+                <span class="model-badge">{{ model | upper }}</span>
+                <span class="model-icon">🤖</span>
+              </label>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+        <button id="generateBtn" type="submit" class="btn btn-primary btn-lg w-100 btn-elevated">
+          <span class="btn-icon">✨</span> Generate Pages
+        </button>
+      </form>
+
+      <div id="statsPanel" class="stats-panel mt-4" style="display: none;">
+        <h3 class="h6 text-secondary mb-3">Generation Stats</h3>
+        <div id="stats"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Results Panel -->
+  <div class="col-lg-8">
+    <div class="results-panel">
+      <div class="panel-header">
+        <h2 class="h5 mb-0">🎨 Generated Landing Pages</h2>
+        <span id="statusIndicator" class="status-badge">Ready</span>
+      </div>
+
+      <div id="resultsTabs" class="results-tabs mt-4">
+        <!-- Dynamically populated -->
+      </div>
+
+      <div id="emptyState" class="empty-state text-center py-5">
+        <p class="text-secondary mb-0">👈 Fill in the form and click "Generate Pages" to start benchmarking</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

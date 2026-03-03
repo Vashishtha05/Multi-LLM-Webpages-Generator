@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlow - Your Next Obsession</title>
+</head>
+<body style="margin: 0; font-family: 'Arial', sans-serif; background-color: #141414; color: #ffffff;">
+
+    <header style="background-color: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; padding: 20px 50px; box-shadow: 0 2px 10px rgba(0,0,0,0.5);">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 28px; font-weight: bold;">StreamFlow</div>
+            <nav>
+                <a href="#" style="margin-right: 30px; text-decoration: none; color: #e50914; font-weight: bold; transition: color 0.3s ease;">Home</a>
+                <a href="#" style="margin-right: 30px; text-decoration: none; color: #ffffff; transition: color 0.3s ease;">TV Shows</a>
+                <a href="#" style="margin-right: 30px; text-decoration: none; color: #ffffff; transition: color 0.3s ease;">Movies</a>
+                <a href="#" style="margin-right: 30px; text-decoration: none; color: #ffffff; transition: color 0.3s ease;">New & Popular</a>
+                <a href="#" style="margin-right: 30px; text-decoration: none; color: #ffffff; transition: color 0.3s ease;">My List</a>
+            </nav>
+            <button style="background-color: #e50914; color: #ffffff; border: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;">Sign In</button>
+        </div>
+    </header>
+
+    <section id="hero" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1598899134573-2dcb5f885470?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 50px;">
+        <h1 style="font-size: 64px; margin-bottom: 20px; font-weight: bold;">Your Next Obsession Awaits</h1>
+        <p style="font-size: 24px; margin-bottom: 30px; max-width: 700px;">Discover thousands of award-winning TV shows, movies, and more. Stream instantly, on any device, without interruptions.</p>
+        <button style="background-color: #e50914; color: #ffffff; border: none; padding: 15px 30px; border-radius: 5px; font-size: 20px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease;">Start Your Free Trial</button>
+    </section>
+
+    <section id="content-showcase" style="padding: 50px 50px;">
+        <h2 style="font-size: 36px; margin-bottom: 30px;">Trending Now</h2>
+        <div style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px;">
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc4191?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">Movie Title 1</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1513150416275-8327989f0239?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">Movie Title 2</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc4191?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">Movie Title 3</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1513150416275-8327989f0239?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">Movie Title 4</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc4191?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">Movie Title 5</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 style="font-size: 36px; margin-bottom: 30px; margin-top: 50px;">New Releases</h2>
+        <div style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px;">
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1513150416275-8327989f0239?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">TV Show Title A</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc4191?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">TV Show Title B</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1513150416275-8327989f0239?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">TV Show Title C</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc4191?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">TV Show Title D</div>
+                </div>
+            </div>
+            <div style="display: inline-block; margin-right: 15px; transition: transform 0.3s ease;">
+                <div style="width: 250px; height: 150px; background-color: #303030; border-radius: 8px; position: relative; overflow: hidden; cursor: pointer;">
+                    <img src="https://images.unsplash.com/photo-1513150416275-8327989f0239?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Movie Poster" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div style="position: absolute; bottom: 10px; left: 10px; color: #ffffff; font-weight: bold;">TV Show Title E</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" style="background-color: #000000; padding: 80px 50px; text-align: center;">
+        <h2 style="font-size: 36px; margin-bottom: 50px;">Why StreamFlow?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+            <div style="text-align: center;">
+                <div style="font-size: 32px; color: #e50914; margin-bottom: 15px;">♾️</div>
+                <h3 style="font-size: 24px; margin-bottom: 10px;">Unlimited Entertainment</h3>
+                <p style="font-size: 18px; color: #aaaaaa;">Watch as much as you want, whenever you want. Endless stories, zero commercials.</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 32px; color: #e50914; margin-bottom: 15px;">📱💻📺</div>
+                <h3 style="font-size: 24px; margin-bottom: 10px;">All Your Devices, One Account</h3>
+                <p style="font-size: 18px; color: #aaaaaa;">Seamlessly switch between your TV, laptop, tablet, and phone.</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 32px; color: #e50914; margin-bottom: 15px;">💡</div>
+                <h3 style="font-size: 24px; margin-bottom: 10px;">Personalized For You</h3>
+                <p style="font-size: 18px; color: #aaaaaa;">Our smart recommendations get to know your tastes, so you always find something new.</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 32px; color: #e50914; margin-bottom: 15px;">⬇️</div>
+                <h3 style="font-size: 24px; margin-bottom: 10px;">Download & Go</h3>
+                <p style="font-size: 18px; color: #aaaaaa;">Take your favorites offline and enjoy them without an internet connection.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" style="background-color: #141414; padding: 80px 50px; text-align: center;">
+        <h2 style="font-size: 36px; margin-bottom: 50px;">It's That Simple</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div style="text-align: center;">
+                <div style="background-color: #e50914; width: 80px; height: 80px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 36px; font-weight: bold; margin: 0 auto 20px auto;">1</div>
+                <h3 style="font-size: 24px; margin-bottom: 15px;">Sign Up</h3>
+                <p style="font-size: 18px; color: #aaaaaa;">Choose your plan and create an account in minutes.</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="background-color: #e50914; width: 80px; height: 80px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 36px; font-weight: bold; margin: 0 auto 20px auto;">2</div>
+                <h3 style="font-size: 24px; margin-bottom: 15px;">Discover</h3>
+                <p style="font-size: 18px; color: #aaaaaa;">Browse our vast library or let us suggest something perfect for you.</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="background-color: #e50914; width: 80px; height: 80px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 36px; font-weight: bold; margin: 0 auto 20px auto;">3</div>
+                <h3 style="font-size: 24px; margin-bottom: 15px;">Watch</h3>
+                <p style="font-size: 18px; color: #aaaaaa;">Enjoy your chosen content instantly on any device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" style="background-color: #000000; padding: 80px 50px; text-align: center;">
+        <h2 style="font-size: 36px; margin-bottom: 50px;">What Our Users Say</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div style="background-color: #222222; padding: 30px; border-radius: 10px;">
+                <p style="font-size: 20px; font-style: italic; margin-bottom: 20px;">"StreamFlow changed how I watch TV! The recommendations are spot-on, and I always find something new to love."</p>
+                <p style="font-weight: bold;">- Alex Johnson</p>
+            </div>
+            <div style="background-color: #222222; padding: 30px; border-radius: 10px;">
+                <p style="font-size: 20px; font-style: italic; margin-bottom: 20px;">"So many choices, so little time! The interface is clean, and it's incredibly convenient for watching on the go."</p>
+                <p style="font-weight: bold;">- Maria Garcia</p>
+            </div>
+            <div style="background-color: #222222; padding: 30px; border-radius: 10px;">
+                <p style="font-size: 20px; font-style: italic; margin-bottom: 20px;">"Finally, a streaming service that understands what I'm looking for. The offline download feature is a lifesaver!"</p>
+                <p style="font-weight: bold;">- Ben Lee</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" style="background-color: #141414; padding: 80px 50px; text-align: center;">
+        <h2 style="font-size: 36px; margin-bottom: 50px;">Choose Your Plan</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+            <div style="background-color: #222222; padding: 40px 30px; border-radius: 10px; text-align: left; border-top: 5px solid #e50914;">
+                <h3 style="font-size: 28px; margin-bottom: 15px;">Basic</h3>
+                <p style="font-size: 48px; font-weight: bold; margin-bottom: 20px;">$9.99<span style="font-size: 20px; font-weight: normal;">/month</span></p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 18px; color: #aaaaaa;">
+                    <li style="margin-bottom: 15px;">HD Streaming</li>
+                    <li style="margin-bottom: 15px;">Watch on 1 Screen</li>
+                    <li style="margin-bottom: 15px;">Download on 1 Device</li>
+                </ul>
+                <button style="background-color: #333333; color: #ffffff; border: 1px solid #ffffff; padding: 15px 30px; border-radius: 5px; font-size: 18px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; width: 100%;">Select Plan</button>
+            </div>
+            <div style="background-color: #222222; padding: 40px 30px; border-radius: 10px; text-align: left; border-top: 5px solid #e50914; transform: scale(1.05); box-shadow: 0 5px 20px rgba(0,0,0,0.5);">
+                <h3 style="font-size: 28px; margin-bottom: 15px;">Premium</h3>
+                <p style="font-size: 48px; font-weight: bold; margin-bottom: 20px;">$15.99<span style="font-size: 20px; font-weight: normal;">/month</span></p>
+                <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 18px; color: #aaaaaa;">
+                    <li style="margin-bottom: 15px;">Ultra HD Streaming</li>
+                    <li style="margin-bottom: 15px;">Watch on 4 Screens</li>
+                    <li style="margin-bottom: 15px;">Download on 4 Devices</li>
+                    <li style="margin-bottom: 15px;">Exclusive Content Access</li>
+                </ul>
+                <button style="background-color: #e50914; color: #ffffff; border: none; padding: 15px 30px; border-radius: 5px; font-size: 18px; cursor: pointer; transition: background-color 0.3s ease, transform 0.2s ease; width: 100%;">Select Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #000000; padding: 50px 50px; color: #aaaaaa;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+            <div>
+                <h4 style="margin-bottom: 20px;">StreamFlow</h4>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">About Us</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Careers</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Press</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Contact</a></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Discover</h4>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">TV Shows</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Movies</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Genres</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">New Releases</a></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Support</h4>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Help Center</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">FAQ</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Terms of Service</a></p>
+                <p><a href="#" style="color: #aaaaaa; text-decoration: none;">Privacy Policy</a></p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 20px;">Connect</h4>
+                <div style="display: flex;">
+                    <a href="#" style="margin-right: 15px;"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='24px' height='24px'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z'/%3E%3Cpath d='M16 12.5h-2.5V16h-3V12.5H8v-3h2.5V8h3v1.5H16z'/%3E%3C/svg%3E" alt="Facebook" style="width: 24px; height: 24px;"></a>
+                    <a href="#" style="margin-right: 15px;"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='24px' height='24px'%3E%3Cpath d='M22.46 6c-.77.35-1.6.57-2.46.69.88-.53 1.56-1.37 1.88-2.38-.42.25-1.16.54-2.1.96-.62-.66-1.51-1.09-2.5-1.09-1.94 0-3.51 1.57-3.51 3.51 0 .27.03.54.08.8-.29-.14-.54-.37-.71-.62-.3-.53-.73-.91-1.25-1.16-.52-.25-1.13-.34-1.73-.25.56-.11 1.04-.28 1.41-.51.37-.22.68-.5.95-.87.33-.45.44-.96.32-1.5-.12-.54-.42-1.02-.86-1.31-1.32-.83-2.62-.91-3.11-.91-.16 0-.32.01-.48.05.53.38.94.93 1.02 1.52-.43-.08-.85-.17-1.27-.26C5.19 4.47 4.24 4 3.21 4-.38 4-.09 4.48.04 4.58.43 5.78 1.43 6.84 2.93 7.2-.3.74-.77 1.38-1.56 1.68-.39.11-.8-.04-1.13-.33-.18-.15-.35-.32-.57-.52-.64-.59-1.43-.92-2.28-.91-1.13 0-2.23.51-3.15 1.37.39-.76.98-1.45 1.81-1.92-.96-.11-1.87-.33-2.7-.74.01.05.02.1.02.14 0 1.47.96 2.8 2.25 3.14-.35-.04-.69-.07-1.03-.07-.26 0-.52.02-.77.07.68.21 1.28.62 1.46 1.11.26.79-.03 1.52-.76 1.95C4.38 17.05 5.52 17.53 7 17.47l.04-.02c.35-.03.69-.04 1.03-.04h.01z'/%3E%3C/svg%3E" alt="Twitter" style="width: 24px; height: 24px;"></a>
+                    <a href="#"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' width='24px' height='24px'%3E%3Cpath d='M16 2H8C4.9 2 2 4.9 2 8v8c0 3.1 2.9 6 6 6h8c3.1 0 6-2.9 6-6V8c0-3.1-2.9-6-6-6zm3 14c0 1.65-1.35 3-3 3H8c-1.65 0-3-1.35-3-3V8c0-1.65 1.35-3 3-3h8c1.65 0 3 1.35 3 3v8z'/%3E%3Cpath d='M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 8c-1.65 0-3-1.35-3-3s1.35-3 3-3 3 1.35 3 3-1.35 3-3 3z'/%3E%3Cpath d='M19.5 7h-1.58c-.25-.55-.54-.84-.87-.84h-2.84c-.47 0-.84.37-.84.84s.37.84.84.84h1.45l-.71.71c-.39.39-.39.98 0 1.37.39.39.98.39 1.37 0l.48-.52.48.52c.39.39.98.39 1.37 0 .39-.39.39-.98 0-1.37l-.71-.71h1.45c.47 0 .84-.37.84-.84z'/%3E%3C/svg%3E" alt="Instagram" style="width: 24px; height: 24px;"></a>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; font-size: 14px;">© 2023 StreamFlow. All rights reserved.</p>
+    </footer>
+
+    <style>
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            header nav, header button {
+                display: none; /* Hide nav and sign in on small screens for simplicity */
+            }
+            #hero {
+                height: 60vh;
+                padding: 0 20px;
+            }
+            #hero h1 {
+                font-size: 40px;
+            }
+            #hero p {
+                font-size: 18px;
+            }
+            .content-card {
+                width: 180px !important;
+                height: 120px !important;
+            }
+            #features div, #how-it-works div, #testimonials div, #pricing div {
+                grid-template-columns: 1fr !important;
+            }
+            footer div {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+            }
+            footer h4 {
+                margin-top: 20px;
+            }
+        }
+
+        /* Hover effects */
+        header a:hover, button:hover {
+            color: #ff7a70; /* Lighter red for hover */
+            transform: translateY(-2px);
+        }
+        .content-card:hover {
+            transform: scale(1.05);
+        }
+        #pricing button:nth-of-type(2):hover {
+            background-color: #ff7a70;
+            transform: translateY(-2px);
+        }
+        #pricing button:nth-of-type(1):hover {
+            background-color: #444444;
+            transform: translateY(-2px);
+        }
+        footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+
+</body>
+</html>
